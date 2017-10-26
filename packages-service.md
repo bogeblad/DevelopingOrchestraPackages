@@ -12,7 +12,7 @@ Currently we use AWS S3 for storage of the global packages. With that we get the
 
 The main registry file is called marketplace.yml. It only contains a list of url:s to all the available packages. The url should point to a **publically available** file. The package service \(and provisioning tool in the end\) looks at the registry and then fetches all the defined packages by fetching the URL. We will come to how a package file should look like.
 
-![](/assets/package-reg-index.png)
+![](/assets/registry-s3.png)
 
 ### Development and pre-production
 
@@ -26,6 +26,4 @@ To deploy a new package there are a few steps.
 2. Update \(or ask admin to update\) the registry file to include your new Package \(URL\).
 
 For developers wanting to handle the entire process themselves in development repository we recommend the S3-filemanager "Cyberduck" as that supports transfer on save.
-
-
 

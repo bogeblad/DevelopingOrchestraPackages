@@ -10,3 +10,5 @@ We have created a global repository, where all packages are made available. The 
 
 The tool is typically run by a configuration analyst which is responsible for setting up the solution and by using this we can cut deployment time from hours/days to minutes.
 
+![](/assets/package-architecture-overview.png)
+
