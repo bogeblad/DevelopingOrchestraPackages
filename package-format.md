@@ -1,3 +1,5 @@
+# Package format
+
 We have selected to use the popular configuration format YAML \(.yml\). It's readable and has support for comments, internal references between nodes and other things which for example JSON does not.
 
 The file is text only and can be named anything as it is the registry who points it out. We recommend you to name it **configuration.yml** or package.yml.
