@@ -68,7 +68,7 @@ Used by both the assets element and the artifacts element.
 | :--- | :--- | :--- |
 | name | String | The name of the artifact |
 | url | String | The url of the artifact \(avail. public\) |
-| contentType | String  | The content type of the artifact |
+| contentType | String | The content type of the artifact |
 | description | String \(optional\) | A text desc of the artifact |
 | type | String / Enum \['UTT','widget'\] \(optional\) | States if it's an Widget, UTT, Terminal etc. |
 
@@ -87,19 +87,41 @@ artifacts:
 
 
 
+#### Parameters \(used by the "parameters" element above\)
 
+This is a hash structure - i.e. multilevel and will be described in an example:
 
+##### Example
 
+```
+parameters:
+  meta:                                       #The section internal name
+    label: 'Notification settings'            #The section headline
+    main_email:                               #The field 
+      label: 'Staff email'                    #The field label 
+      type: 'text'                            #The field type  
+      default: 'uk'                           #The field default value 
+      dataParsleyType: 'email'                #The field validation type (Parsley JS Validator) 
+    welcome_text: 
+      label: 'Welcome text'
+      type: 'text'
+      default: 'Welcome to Click and Collect!'
+    image_main: 
+      label: 'Surface logo'
+      type: 'file'        
+      default: ''
+  communication:
+    label: 'Communication settings'
+    beepsend_key:
+      label: 'Beepsend token'
+      type: 'text'
+      default: ''
+    ccUserPhone:
+      label: 'Staff notification mobile number'
+      type: 'text'
+      default: '467010xxxxx'
 
+```
 
-
-
-
-
-
-
-
-
-
-
+There is a special section that is called intro: that only needs an label element. If this exists it is show first as introduction to the form.
 
