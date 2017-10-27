@@ -1,6 +1,6 @@
 # Roles and users
 
-
+SSS
 
 ```
 roles:
@@ -20,13 +20,8 @@ roles:
     description: 'Only used for getting access to REST API:s'
     modules:
       - 'servicePoint'
-      - 'entryPoint'  
-
+      - 'entryPoint'
 ```
-
-
-
-
 
 ```
 users:
