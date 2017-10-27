@@ -4,4 +4,5 @@
 * [Background](background.md)
 * [Packages service](packages-service.md)
 * [Package format](package-format.md)
+* [Package](package.md)
 
