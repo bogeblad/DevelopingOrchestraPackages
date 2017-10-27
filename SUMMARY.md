@@ -5,4 +5,11 @@
 * [Packages service](packages-service.md)
 * [Package format](package-format.md)
 * [Package](package.md)
+* [GlobalUnits](globalunits.md)
+* [SurfaceGroups](surfacegroups.md)
+* Services
+* OperationProfiles
+* Branches
+* Roles and Users
+* GlobalVariables
 
