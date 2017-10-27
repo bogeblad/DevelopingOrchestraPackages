@@ -9,7 +9,7 @@
 * [SurfaceGroups](surfacegroups.md)
 * [Services](services.md)
 * OperationProfiles
-* Branches
+* [Branches](branches.md)
 * Roles and Users
 * GlobalVariables
 
