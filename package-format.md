@@ -38,7 +38,7 @@ The current format has the following main areas / root elements :
 | artifacts | List of type Artifact \(own section\) | List of artifacts to deploy |
 | parameters | Package configuration parameters \(own section\) | List of configurable properties on the package. Used to generate the deploy configuration form. |
 
-#### Example
+##### Example
 
 ```
 UUID: '101'
@@ -58,11 +58,48 @@ artifacts: ...
 parameters: ...
 ```
 
-### Subelements
+### Subelement types
+
+#### Artifact \(annotated with !com.qmatic.orchestra.provisioning.entities.Artifact\)
+
+Used by both the assets element and the artifacts element.
 
 | Attribute | Type | Description |
 | :--- | :--- | :--- |
-|  |  |  |
+| name | String | The name of the artifact |
+| url | String | The url of the artifact \(avail. public\) |
+| contentType | String  | The content type of the artifact |
+| description | String \(optional\) | A text desc of the artifact |
+| type | String / Enum \['UTT','widget'\] \(optional\) | States if it's an Widget, UTT, Terminal etc. |
+
+##### Example
+
+```
+artifacts:
+    - 
+      !com.qmatic.orchestra.provisioning.entities.Artifact
+      name: 'ExampleUTT'
+      url: 'https://s3-eu-west-1.amazonaws.com/example.utt'
+      description: 'An example UTT'
+      contentType: 'application/x-zip'
+      type: 'UTT'
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
