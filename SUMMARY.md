@@ -7,7 +7,7 @@
 * [Package](package.md)
 * [GlobalUnits](globalunits.md)
 * [SurfaceGroups](surfacegroups.md)
-* Services
+* [Services](services.md)
 * OperationProfiles
 * Branches
 * Roles and Users
