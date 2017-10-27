@@ -72,7 +72,9 @@ As widgets are referenced in the html of a surface we only need to supply the se
 | title | String \(optional\) | The widget title |
 | description | String \(optional\) | The widget description |
 | icon | String \(optional\) | A text desc of the artifact |
-| type | String / Enum \['UTT','widget'\] \(optional\) | States if it's an Widget, UTT, Terminal etc. |
+| standalone | String \(optional\) | See widget docs |
+| widgetId | String | The id of the widget as referenced in the html-attribute.  |
+| parameters | List of key/value | The widget settings - see example |
 
 ##### Example
 
@@ -80,34 +82,23 @@ As widgets are referenced in the html of a surface we only need to supply the se
 widgetSettings: 
   -
     !com.qmatic.orchestra.provisioning.entities.WidgetSetting
-    identifier: 'http://qmatic.com/widgets/clickandcollect'
+    identifier: 'http://qmatic.com/widgets/simpleexamplewidget'
     title: 'Click and Collect'
-    description: 'Click and Collect Widget'
-    icon: 'http://127.0.0.1:8080/wookie/wservices/qmatic.com/widgets/clickandcollect/img/x.png'
+    description: 'Simple example Widget'
+    icon: 'http://127.0.0.1:8080/wookie/wservices/qmatic.com/widgets/simpleexamplewidget/img/x.png'
     standalone: 'true'
-    widgetId: 'widget_4'
+    widgetId: 'widget_1'
     parameters:
       -
-        key: "auth.user"
-        type: "string"
-        name: "Autorization Username"
-        description: "Autorization Username"
-        value: "widgetrestuser"
-        validation: ""
-        validationMessage: ""
-        #enumeratedValues: "null"
+        key: "font.color"
+        value: "blue"
       -
-        key: "auth.pass"
-        type: "string"
-        name: "Autorization Password"
-        description: "Autorization Password"
-        value: "widgetPass88"
-        validation: ""
-        validationMessage: ""
-        #enumeratedValues: null
+        key: "font.size"
+        value: "24px"
+
 ```
 
-#### Parameters \(used by the "parameters" element above\)
+#### 
 
 
 
