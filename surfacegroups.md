@@ -60,5 +60,34 @@ surfaces:
     branchProfileName: 'Click And Collect'
 ```
 
+### Subelement types
+
+#### WidgetSettings \(annotated with !com.qmatic.orchestra.provisioning.entities.WidgetSetting\)
+
+As widgets are referenced in the html of a surface we only need to supply the settings for it.
+
+| Attribute | Type | Description |
+| :--- | :--- | :--- |
+| name | String | The name of the artifact |
+| url | String | The url of the artifact \(avail. public\) |
+| contentType | String | The content type of the artifact |
+| description | String \(optional\) | A text desc of the artifact |
+| type | String / Enum \['UTT','widget'\] \(optional\) | States if it's an Widget, UTT, Terminal etc. |
+
+##### Example
+
+```
+artifacts:
+    - 
+      !com.qmatic.orchestra.provisioning.entities.Artifact
+      name: 'ExampleUTT'
+      url: 'https://s3-eu-west-1.amazonaws.com/example.utt'
+      description: 'An example UTT'
+      contentType: 'application/x-zip'
+      type: 'UTT'
+```
+
+#### Parameters \(used by the "parameters" element above\)
+
 
 
