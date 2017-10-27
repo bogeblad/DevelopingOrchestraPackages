@@ -68,23 +68,43 @@ As widgets are referenced in the html of a surface we only need to supply the se
 
 | Attribute | Type | Description |
 | :--- | :--- | :--- |
-| name | String | The name of the artifact |
-| url | String | The url of the artifact \(avail. public\) |
-| contentType | String | The content type of the artifact |
-| description | String \(optional\) | A text desc of the artifact |
+| identifier | String | The identifier of the widget |
+| title | String \(optional\) | The widget title |
+| description | String \(optional\) | The widget description |
+| icon | String \(optional\) | A text desc of the artifact |
 | type | String / Enum \['UTT','widget'\] \(optional\) | States if it's an Widget, UTT, Terminal etc. |
 
 ##### Example
 
 ```
-artifacts:
-    - 
-      !com.qmatic.orchestra.provisioning.entities.Artifact
-      name: 'ExampleUTT'
-      url: 'https://s3-eu-west-1.amazonaws.com/example.utt'
-      description: 'An example UTT'
-      contentType: 'application/x-zip'
-      type: 'UTT'
+widgetSettings: 
+  -
+    !com.qmatic.orchestra.provisioning.entities.WidgetSetting
+    identifier: 'http://qmatic.com/widgets/clickandcollect'
+    title: 'Click and Collect'
+    description: 'Click and Collect Widget'
+    icon: 'http://127.0.0.1:8080/wookie/wservices/qmatic.com/widgets/clickandcollect/img/x.png'
+    standalone: 'true'
+    widgetId: 'widget_4'
+    parameters:
+      -
+        key: "auth.user"
+        type: "string"
+        name: "Autorization Username"
+        description: "Autorization Username"
+        value: "widgetrestuser"
+        validation: ""
+        validationMessage: ""
+        #enumeratedValues: "null"
+      -
+        key: "auth.pass"
+        type: "string"
+        name: "Autorization Password"
+        description: "Autorization Password"
+        value: "widgetPass88"
+        validation: ""
+        validationMessage: ""
+        #enumeratedValues: null
 ```
 
 #### Parameters \(used by the "parameters" element above\)
