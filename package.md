@@ -98,6 +98,24 @@ parameters:
       label: 'Staff notification mobile number'
       type: 'text'
       default: '467010xxxxx'
+      
+#An example where you will give the user an option to state up to 3 outcome names. 
+  outcomes:
+    label: 'Services'
+    outcomeName: 
+      label: 'Outcome name'
+      type: 'text'
+      default: 'uk'
+      repetitions: 3
+      
+#Can be used on all entities but your entity must them look like the commented part below
+#  - &outcome_53
+#    !com.qmatic.orchestra.provisioning.entities.Outcome
+#    id: 53
+#    name: '${outcomeName}' #this is a name reference to the outcomeName-parameter. 
+#    code: ''
+#    with_dict: "{{ outcomes }}"  #this is a name reference to the outcomes-parameter. 
+      
 ```
 
 There is a special section that is called intro: that only needs an label element. If this exists it is show first as introduction to the form.
